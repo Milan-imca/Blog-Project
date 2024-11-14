@@ -7,7 +7,7 @@ import toast from 'react-hot-toast';
 const Register = () => {
 
   const navigate = useNavigate();
-    const url = "http://localhost:8080"
+    const url = import.meta.env.VITE_BACKEND_URL
 
   const [input, setInput] = useState({ 
     username: '',

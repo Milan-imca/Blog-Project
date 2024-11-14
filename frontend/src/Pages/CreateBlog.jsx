@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 const CreateBlogForm = () => {
-  const url = "http://localhost:8080"
+  const url = import.meta.env.VITE_BACKEND_URL
   const [formData, setFormData] = useState({
     title: "",
     description: "",

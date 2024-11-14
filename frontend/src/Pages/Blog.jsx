@@ -4,7 +4,7 @@ import BlogCard from "../Components/Blogs/BlogCard";
 
 const Blog = () => {
   const [blog, setBlog] = useState([]);
-  const url = "http://localhost:8080"
+  const url = import.meta.env.VITE_BACKEND_URL;
 
   const getAllBlogs = async () => { 
     try {

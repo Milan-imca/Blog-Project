@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import BlogCard from '../Components/Blogs/BlogCard';
 
 const UserBlogs = () => {
-  const url = "http://localhost:8080"
+  const url = import.meta.env.VITE_BACKEND_URL
   const [userBlog, setUserBlog] = useState(null);
 
   const getUserBlog = async () => {

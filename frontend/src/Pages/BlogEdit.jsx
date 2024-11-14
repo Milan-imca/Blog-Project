@@ -9,7 +9,7 @@ const BlogEdit = () => {
   const [blog, setBlog] = useState({});
   const navigate = useNavigate();
   const id = useParams().id;
-  const url = "http://localhost:8080"
+  const url = import.meta.env.VITE_BACKEND_URL
 
   const [formData, setFormData] = useState({
     user: localStorage.getItem("userId") || "", // This should be the logged-in user's ID

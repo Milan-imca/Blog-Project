@@ -15,6 +15,7 @@ const BlogCard = ({
   time,
 }) => {
   const navigate = useNavigate();
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
   const handleEdit = () => {
     navigate(`/blog-edit/${id}`);
@@ -22,7 +23,7 @@ const BlogCard = ({
   const handleDelete = async () => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:8080/api/v1/blog/delete-blog/${id}`
+        `${backendUrl}/api/v1/blog/delete-blog/${id}`
       );
       if (data && data.success) {
         navigate("/my-blogs");
